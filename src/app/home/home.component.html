@@ -1,0 +1,15 @@
+<article style="padding:20px">
+    <label>ngModel</label>
+    <input type="text" [(ngModel)]="newName">
+    <button (click)="runAddHero($event)">Add Hero With Event</button>
+    <p>{{newName}}</p>
+    <br>
+    <br>
+    <br>
+    <label>Local Ref</label>
+    <input type="text" #nameRef>
+    <button (click)="runAddHeroRef($event,nameRef)">Add Hero With Ref</button>
+    <p>{{nameRef.value}}</p>
+    <br>
+
+</article>
