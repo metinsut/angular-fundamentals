@@ -34,33 +34,33 @@ export class DetailComponent
   title: ElementRef;
 
   constructor() {
-    console.log('1', 'constructor');
+    // console.log('1', 'constructor');
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    console.log('2', 'onChange');
-    console.log(changes);
+    // console.log('2', 'onChange');
+    // console.log(changes);
   }
 
   ngOnInit() {
-    console.log('3', 'ngOnInit');
-    console.log('randomTitle', this.title.nativeElement);
+    // console.log('3', 'ngOnInit');
+    // console.log('randomTitle', this.title.nativeElement);
   }
 
   ngDoCheck(): void {
-    console.log('4', 'ngDoCheck');
+    // console.log('4', 'ngDoCheck');
   }
   ngAfterContentInit(): void {
-    console.log('5', 'ngAfterContentInit');
+    // console.log('5', 'ngAfterContentInit');
   }
   ngAfterContentChecked(): void {
-    console.log('6', 'ngAfterContentChecked');
+    // console.log('6', 'ngAfterContentChecked');
   }
   ngAfterViewInit(): void {
-    console.log('7', 'ngAfterViewInit');
-    console.log('randomTitle', this.title.nativeElement);
+    // console.log('7', 'ngAfterViewInit');
+    // console.log('randomTitle', this.title.nativeElement);
   }
   ngAfterViewChecked(): void {
-    console.log('8', 'ngAfterViewChecked');
+    // console.log('8', 'ngAfterViewChecked');
   }
 }
