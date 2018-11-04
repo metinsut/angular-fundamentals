@@ -1,0 +1,46 @@
+<article>
+
+   <form (ngSubmit)="onSubmit()" #form="ngForm">
+      <div class="form-group" ngModelGroup="userDetail" #userData="ngModelGroup">
+         <div class="form-item">
+            <input type="text" name="username" required ngModel>
+         </div>
+         <div class="form-item">
+            <input type="text" name="email" required email ngModel #email="ngModel">
+         </div>
+         <div class="form-item">
+            <button (click)="setForm()">Fill Form User Random</button>
+         </div>
+      </div>
+
+      <hr>
+
+      <div class="form-item">
+         <select name="secret" [ngModel]="defaultValue">
+            <option value="pet">Your first pet</option>
+            <option value="teacher">Your first teacher</option>
+         </select>
+      </div>
+
+      <div class="form-item">
+         <div class="radio-group" *ngFor="let gender of genders">
+            <label>
+               <input type="radio" name="gender" ngModel [value]="gender">
+               <p>{{gender}}</p>
+            </label>
+         </div>
+      </div>
+
+      <hr>
+      <br>
+      <div class="form-item">
+         <input type="submit" value="Submit">
+         <!-- <input type="submit" value="Submit" [disabled]="!form.valid"> -->
+      </div>
+      <div class="form-item">
+            <button (click)="resetForm()">Reset</button>
+      </div>
+
+   </form>
+
+</article>

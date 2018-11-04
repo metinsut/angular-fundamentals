@@ -1,0 +1,22 @@
+article {
+   padding: 10px;
+   form {
+      padding: 10px;
+      .form-item {
+         padding: 10px
+      }
+   }
+}
+
+// .ng-valid[required], .ng-valid.required  {
+//    border-left: 5px solid #42A948; /* green */
+//  }
+ 
+//  .ng-invalid:not(form)  {
+//    border-left: 5px solid #a94442; /* red */
+//  }
+
+label {
+   display: flex;
+   align-items: center;
+}
