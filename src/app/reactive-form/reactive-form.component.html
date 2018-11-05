@@ -1,0 +1,40 @@
+<article>
+   <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+      <div class="form-group" formGroupName="userData">
+         <div class="form-item">
+            <input type="text" name="username" formControlName="username">
+            <p *ngIf="!profileForm.get('userData.username').valid && profileForm.get('userData.username').touched">Please
+               enter...</p>
+         </div>
+         <div class="form-item">
+            <input type="text" name="email" formControlName="email">
+            <p *ngIf="!profileForm.get('userData.email').valid && profileForm.get('userData.email').touched">Please
+               enter...</p>
+         </div>
+      </div>
+
+      <div class="form-item">
+         <div class="radio-group" *ngFor="let gender of genders">
+            <label>
+               <input type="radio" name="gender" formControlName="gender" [value]="gender">
+               <p>{{gender}}</p>
+            </label>
+         </div>
+         <p *ngIf="!profileForm.get('gender').valid && profileForm.get('gender').touched">Please enter...</p>
+      </div>
+
+      <div class="form-group" formArrayName="hobbies">
+         <h4>Add Hobby</h4>
+         <button type="button" (click)="addHobby()">Add Hobby</button>
+         <div class="form-item" *ngFor="let hobby of profileForm.get('hobbies').controls; let i=index">
+            <input type="text" [formControlName]="i">
+         </div>
+      </div>
+
+      <div class="form-item">
+         <input type="submit" value="Submit">
+      </div>
+
+   </form>
+
+</article>

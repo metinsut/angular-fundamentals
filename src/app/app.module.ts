@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -16,6 +17,7 @@ import { ShowComponent } from './show/show.component';
 import { HomeService } from './services/home.service';
 import { HttpComponent } from './http/http.component';
 import { HttpService } from './services/http.service';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 @NgModule({
    declarations: [
@@ -28,9 +30,16 @@ import { HttpService } from './services/http.service';
       FormComponent,
       AddComponent,
       ShowComponent,
-      HttpComponent
+      HttpComponent,
+      ReactiveFormComponent
    ],
-   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+   imports: [
+      BrowserModule,
+      AppRoutingModule,
+      HttpClientModule,
+      FormsModule,
+      ReactiveFormsModule
+   ],
    providers: [HomeService, HttpService],
    bootstrap: [AppComponent]
 })
