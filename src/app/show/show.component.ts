@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Hero } from '../models/hero';
-import { HomeServie } from '../services/home.service';
+import { HomeService } from '../services/home.service';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -11,7 +11,7 @@ import { Subscription } from 'rxjs';
 export class ShowComponent implements OnInit, OnDestroy {
    heroes: Hero[] = [];
    private subscription: Subscription;
-   constructor(private homeService: HomeServie) {}
+   constructor(private homeService: HomeService) {}
 
    ngOnInit() {
       this.heroes = this.homeService.getHero();

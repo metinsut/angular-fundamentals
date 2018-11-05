@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,7 +13,9 @@ import { HeaderComponent } from './header/header.component';
 import { FormComponent } from './form/form.component';
 import { AddComponent } from './add/add.component';
 import { ShowComponent } from './show/show.component';
-import { HomeServie } from './services/home.service';
+import { HomeService } from './services/home.service';
+import { HttpComponent } from './http/http.component';
+import { HttpService } from './services/http.service';
 
 @NgModule({
    declarations: [
@@ -24,10 +27,11 @@ import { HomeServie } from './services/home.service';
       HeaderComponent,
       FormComponent,
       AddComponent,
-      ShowComponent
+      ShowComponent,
+      HttpComponent
    ],
-   imports: [BrowserModule, AppRoutingModule, FormsModule],
-   providers: [HomeServie],
+   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+   providers: [HomeService, HttpService],
    bootstrap: [AppComponent]
 })
 export class AppModule {}

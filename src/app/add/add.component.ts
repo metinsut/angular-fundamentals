@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HomeServie } from '../services/home.service';
+import { HomeService } from '../services/home.service';
 
 @Component({
    selector: 'app-add',
@@ -7,7 +7,7 @@ import { HomeServie } from '../services/home.service';
    styleUrls: ['./add.component.scss']
 })
 export class AddComponent implements OnInit {
-   constructor(private homeService: HomeServie) {}
+   constructor(private homeService: HomeService) {}
    newName: string;
    ngOnInit() {}
 

@@ -1,0 +1,20 @@
+article {
+   padding: 20px;
+   display: grid;
+   justify-content: flex-start;
+}
+
+button {
+   padding: 5px 15px;
+   color: white;
+   font-size: 18px;
+   background-color: #137177;
+   border: none;
+   justify-self: flex-start;
+}
+
+.text {
+   color:#4a4a4a;
+   font-size: 24px;
+   padding: 10px;
+}

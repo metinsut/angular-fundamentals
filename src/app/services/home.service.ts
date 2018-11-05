@@ -1,7 +1,7 @@
 import { Hero } from '../models/hero';
 import { Subject } from 'rxjs';
 
-export class HomeServie {
+export class HomeService {
    heroChanged = new Subject<Hero[]>();
    private heroes: Hero[] = [
       new Hero(1, 'Windstorm'),
