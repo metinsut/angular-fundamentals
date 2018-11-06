@@ -3,13 +3,18 @@
       <div class="form-group" formGroupName="userData">
          <div class="form-item">
             <input type="text" name="username" formControlName="username">
-            <p *ngIf="!profileForm.get('userData.username').valid && profileForm.get('userData.username').touched">Please
-               enter...</p>
+            <div *ngIf="!profileForm.get('userData.username').valid && profileForm.get('userData.username').touched">
+               <p *ngIf="profileForm.get('userData.username').errors['nameisforbbiden']">Name is invalid!</p>
+               <p *ngIf="profileForm.get('userData.username').errors['required']">This field is required!</p>
+            </div>
          </div>
          <div class="form-item">
             <input type="text" name="email" formControlName="email">
-            <p *ngIf="!profileForm.get('userData.email').valid && profileForm.get('userData.email').touched">Please
-               enter...</p>
+            <div *ngIf="!profileForm.get('userData.email').valid && profileForm.get('userData.email').touched">
+               <p *ngIf="!profileForm.get('userData.email').valid && profileForm.get('userData.email').touched">Please
+                  enter...</p>
+               <p *ngIf="profileForm.get('userData.email').errors['invalid']">Invalid Email</p>
+            </div>
          </div>
       </div>
 

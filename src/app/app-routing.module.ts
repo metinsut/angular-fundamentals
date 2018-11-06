@@ -6,6 +6,7 @@ import { AddComponent } from './add/add.component';
 import { ShowComponent } from './show/show.component';
 import { HttpComponent } from './http/http.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { PromiseComponent } from './promise/promise.component';
 
 const routes: Routes = [
    { path: 'add', component: AddComponent },
@@ -13,7 +14,8 @@ const routes: Routes = [
    { path: 'directive', component: DirectiveComponent },
    { path: 'form', component: FormComponent },
    { path: 'form2', component: ReactiveFormComponent },
-   { path: 'http', component: HttpComponent }
+   { path: 'http', component: HttpComponent },
+   { path: 'promise', component: PromiseComponent }
 ];
 
 @NgModule({

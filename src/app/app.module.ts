@@ -18,6 +18,7 @@ import { HomeService } from './services/home.service';
 import { HttpComponent } from './http/http.component';
 import { HttpService } from './services/http.service';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { PromiseComponent } from './promise/promise.component';
 
 @NgModule({
    declarations: [
@@ -31,7 +32,8 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
       AddComponent,
       ShowComponent,
       HttpComponent,
-      ReactiveFormComponent
+      ReactiveFormComponent,
+      PromiseComponent
    ],
    imports: [
       BrowserModule,

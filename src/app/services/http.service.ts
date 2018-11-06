@@ -13,21 +13,37 @@ export class HttpService {
    url4 = 'http://localhost:3400/delay/4';
    url5 = 'http://localhost:3400/delay/5';
    url6 = 'http://localhost:3400/delay/6';
+   url10 = 'http://localhost:3400/delay/10';
 
    constructor(private http: HttpClient) {}
 
-   delayApi3() {
-      const promise = this.http.post(this.url3, null);
-      return promise;
+   delayApi2() {
+      return this.http.post(this.url2, null);
    }
 
-   delayApi4 = () =>
-      new Promise((resolve, reject) => {
-         this.http.post(this.url4, null).subscribe(res => resolve(res));
-      })
+   delayApi3 = () => {
+      console.log('delayApi4->Started');
+      return new Promise((resolve, reject) => {
+         this.http.post(this.url3, null).subscribe(res => resolve(res));
+      });
+   }
 
-   delayApi5(data) {
-      const promise = fetch(this.url5, { method: 'post', body: data });
-      return promise;
+   delayApi4() {
+      console.log('delayApi4->Started');
+      return fetch(this.url4, { method: 'post' });
+   }
+   delayApi5() {
+      console.log('delayApi5->Started');
+      const data = fetch(this.url5, { method: 'post' });
+      console.log('delayApi5->Finished');
+      return data;
+   }
+   delayApi6() {
+      console.log('delayApi6->Started');
+      return fetch(this.url6, { method: 'post' });
+   }
+   delayApi10() {
+      console.log('random2->Started');
+      return fetch(this.url10, { method: 'post' });
    }
 }
