@@ -19,6 +19,9 @@ import { HttpComponent } from './http/http.component';
 import { HttpService } from './services/http.service';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { PromiseComponent } from './promise/promise.component';
+import { PipeComponent } from './pipe/pipe.component';
+import { PipePipe } from './pipe.pipe';
+import { DoublePipe } from './double.pipe';
 
 @NgModule({
    declarations: [
@@ -33,7 +36,10 @@ import { PromiseComponent } from './promise/promise.component';
       ShowComponent,
       HttpComponent,
       ReactiveFormComponent,
-      PromiseComponent
+      PromiseComponent,
+      PipeComponent,
+      PipePipe,
+      DoublePipe
    ],
    imports: [
       BrowserModule,

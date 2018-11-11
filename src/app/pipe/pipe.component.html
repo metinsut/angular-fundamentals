@@ -1,0 +1,11 @@
+<article>
+   <ul class="persons">
+      <li *ngFor="let person of persons">
+         <div>{{person.id}}</div>
+         <div>{{person.name}}</div>
+         <div>{{person.age | double}}</div>
+         <div>{{person.city}}</div>
+         <div>{{person.large | shorten:5 }}</div>
+      </li>
+   </ul>
+</article>

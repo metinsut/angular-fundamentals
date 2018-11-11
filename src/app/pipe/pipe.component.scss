@@ -1,0 +1,12 @@
+.persons {
+   padding: 20px;
+   li {
+      display: grid;
+      justify-content: center;
+      grid-template-columns: repeat(auto-fit, minmax(auto, 100px));
+      div {
+         padding: 10px;
+         border: 1px solid darkgray;
+      }
+   }
+}
