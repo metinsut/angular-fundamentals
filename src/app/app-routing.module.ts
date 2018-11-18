@@ -8,6 +8,7 @@ import { HttpComponent } from './http/http.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { PromiseComponent } from './promise/promise.component';
 import { PipeComponent } from './pipe/pipe.component';
+import { HttpClientComponent } from './http-client/http-client.component';
 
 const routes: Routes = [
    { path: 'add', component: AddComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
    { path: 'form', component: FormComponent },
    { path: 'form2', component: ReactiveFormComponent },
    { path: 'http', component: HttpComponent },
+   { path: 'http-client', component: HttpClientComponent },
    { path: 'promise', component: PromiseComponent },
    { path: 'pipe', component: PipeComponent }
 ];

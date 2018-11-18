@@ -11,7 +11,7 @@ export class PipeComponent implements OnInit {
          id: 1,
          name: 'John',
          age: 31,
-         city: 'neverland',
+         city: 'neverlandaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
          large: 'bekleyebilirmisin?'
       },
       { id: 2, name: 'Durzo', age: 41, city: 'superland', large: 'bekle?' },

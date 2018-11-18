@@ -1,12 +1,20 @@
 .persons {
    padding: 20px;
-   li {
+   // display: grid;
+   // grid-template-columns: 1fr;
+   // grid-gap: 10px;
+   .items {
       display: grid;
-      justify-content: center;
-      grid-template-columns: repeat(auto-fit, minmax(auto, 100px));
-      div {
+      // grid-template-columns: repeat(auto-fit, minmax(auto, 150px));
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-gap: 10px;
+      margin:10px 0;
+      background-color: darkkhaki;
+      .item {
          padding: 10px;
          border: 1px solid darkgray;
+         overflow: hidden;
+         text-overflow: ellipsis;
       }
    }
 }

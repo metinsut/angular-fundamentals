@@ -22,6 +22,7 @@ import { PromiseComponent } from './promise/promise.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { PipePipe } from './pipe.pipe';
 import { DoublePipe } from './double.pipe';
+import { HttpClientComponent } from './http-client/http-client.component';
 
 @NgModule({
    declarations: [
@@ -39,7 +40,8 @@ import { DoublePipe } from './double.pipe';
       PromiseComponent,
       PipeComponent,
       PipePipe,
-      DoublePipe
+      DoublePipe,
+      HttpClientComponent
    ],
    imports: [
       BrowserModule,
